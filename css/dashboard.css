@@ -1,0 +1,115 @@
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+}
+
+.content h2{
+    margin: 20px 0 30px;
+}
+
+.botao-menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.botao-menu img{
+    width: 50px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ffffff1c;
+    height: 50px;
+    width: 150px;
+	transition: all .3s ease-in-out;
+    color: #000;
+}
+
+.editar img{
+    width: 15px;
+}
+
+.texto img{
+    width: 30px;
+    padding-left: 5px;
+}
+
+.editar:hover{
+    color: #000;
+}
+
+.texto:hover{
+    background-color: #ffffff46;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px 0 0;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -240px; 
+    width: 280px;
+    height: 100%;
+    background-color: #F3B44C;
+    color: #fff;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 900;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.075);
+}
+
+.usuario{
+    color: #fff;
+    text-align: center;
+    padding: 80px 0 0;
+}
+
+.usuario img{
+    width: 85px;
+}
+
+.ver-menu {
+    left: 0;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral li {
+    margin: 10px 0;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.ver-menu {
+    left: 0;
+}

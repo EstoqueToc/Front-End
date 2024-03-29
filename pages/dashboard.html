@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+    <link rel="website icon" href="../img/logo.jpeg" />
+    <title>EstoqueToc | Dashboard</title>
+</head>
+<body>
+    <nav class="menu-lateral" id="menuLateral">
+        <div class="botao-menu" onclick="botaoMenu()">
+            <img src="../img/menu-hamburguer.png" alt="" />
+        </div>
+
+        <div class="usuario">
+            <h4 id="Empresa"></h4>
+            <img src="../img/usuario.png" alt="" />
+            <h4 id="Usuario"></h4>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Página Inicial</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
+                </a>
+            </li>
+            <!-- <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Vendas<img src="../assets/img/crescimento.png" alt=""></span>
+                </a>
+            </li> -->
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="../dashboard/usuario.html">
+                    <span class="icone"></span>
+                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Suporte<img src="../img/suporte.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+   
+    <script>
+        function botaoMenu() {
+            var menu = document.getElementById("menu");
+            var botaoMenuImg = document.getElementById("botaoMenuImg");
+
+            menuLateral.classList.toggle("ver-menu");
+            botaoMenuImg.style.display = menuLateral.classList.contains("ver-menu") ? "none" : "block";
+
+            var content = document.querySelector(".content");
+            content.classList.toggle("content-shift");
+        }
+    </script>
+</body>
+</html>
