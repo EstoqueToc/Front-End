@@ -2,7 +2,7 @@
 
 
 <p align="center">
-   <img src="1.png" width="300" height="300"> 
+   <img src="1 (1).png" width="300" height="300"> 
    <p align="center">Gerenciando seu estoque com precisão e eficiência.</p>
 </p>
 
