@@ -1,0 +1,39 @@
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6; 
+  }
+
+  body{
+    height: 100%;
+  }
+  
+/*-------------------- Scrollbar ---------------------*/
+::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+/* Estilo do "pulso" (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.301); /* Cor do "pulso" */
+    border-radius: 3px; /* Borda arredondada */
+}
+
+
+
+
+
+
+
+
+
+
