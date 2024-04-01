@@ -222,3 +222,13 @@ ul{
     bottom: 0;
     width: 100%;
 }
+
+.ex1{
+    background-color: rgba(0, 128, 0, 0.448);
+}
+.ex2{
+    background-color: rgba(255, 255, 0, 0.422);
+}
+.ex3{
+    background-color: rgba(255, 0, 0, 0.355);
+}

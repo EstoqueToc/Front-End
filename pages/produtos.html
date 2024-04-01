@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EstoqueToc | Usuários</title>
+    <link rel="stylesheet" href="../css/dashboard.css"/>
+    <link rel="stylesheet" href="../css/usuario.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+    <link rel="website icon" href="../img/logo.jpeg" />
+  </head>
+
+  <body>
+    <nav class="menu-lateral" id="menuLateral">
+        <div class="botao-menu" onclick="botaoMenu()">
+            <img src="../img/menu-hamburguer.png" alt="" />
+        </div>
+
+        <div class="usuario">
+            <h4 id="Empresa"></h4>
+            <img src="../img/usuario.png" alt="" />
+            <h4 id="Usuario"></h4>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./dashboard.html">
+                    <span class="icone"></span>
+                    <span class="texto">Página Inicial</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./relatorios.html">
+                    <span class="icone"></span>
+                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./usuario.html">
+                    <span class="icone"></span>
+                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
+                </a>
+            </li>
+            <!--  <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Suporte<img src="..//img/suporte.png" alt=""></span>
+                </a>
+            </li> -->
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <a href="#default" class="logo">Produtos<img src="../img/icon-park-outline--add.svg" alt="adicionar novo usuario"></a> 
+        <div class="header-right">
+          <input type="search">
+          <button class="pesquisar">Pesquisar</button>
+        </div>
+    </div>
+
+    <div class="container-usuarios">
+        <table class="tabela-usuario">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Status Estoque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Pá</td>
+                    <td>16 UN</td>
+                    <td>R$23,90</td>
+                    <td class="ex1">Bom</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Arame 16mm</td>
+                    <td>5 RL</td>
+                    <td>R$150,98</td>
+                    <td class="ex2">Atenção</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Areia</td>
+                    <td>1 x SC40</td>
+                    <td>R$60,75</td>
+                    <td class="ex3">Urgência</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <p>&copy;EstoqueToc.</p>
+    </footer>
+
+</body>
+</html>
