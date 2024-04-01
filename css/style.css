@@ -19,13 +19,20 @@
   
 /*-------------------- Scrollbar ---------------------*/
 ::-webkit-scrollbar {
-    width: 5px; /* Largura da barra de rolagem */
+  width: 8px; /* Largura da barra de rolagem */
+  height: 50%;
+  border-radius: 6px; /* Raio do arredondamento */
 }
 
-/* Estilo do "pulso" (thumb) */
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  max-height: 10px;
+}
+
+/* Cursor da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.301); /* Cor do "pulso" */
-    border-radius: 3px; /* Borda arredondada */
+  background: #8888885b; /* Cor do cursor */
+  border-radius: 6px; /* Raio do arredondamento */
 }
 
 

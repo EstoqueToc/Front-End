@@ -17,19 +17,21 @@ header .content{
     left: 0;
     transition: 0.6s;
     background-color: #CE8132;
+    display: flex;
+    align-items: center;
+    justify-content:center;
   }
   
   nav{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0px 10px;
+    justify-content:center;
+    margin: 0px 65px;
   }
   
   header img{
       width: 60px;
-      margin-left: 5px;
-      margin-top: 2px;
+      margin-top: 5px 30px;
   }
   
   header ul{
@@ -38,24 +40,24 @@ header .content{
   
   header ul li {
     display: inline-block;
-    margin: 10px;
+    margin: 20px;
   }
   
   header ul li a {
     color: #fff;
     text-decoration: none;
+    margin: 20px;
   }
   
   button{
-    padding: 8px;
+    padding: 12px;
     background-color: #fff;
     color: #004D3D;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    padding: 10px;
     font-size: 1rem;
-    margin: 10px;
+    margin: 0px 40px;
     transition: 0.6s;
   }
   
@@ -66,14 +68,14 @@ header .content{
    }
    
    button:hover:not(:disabled) {
-    background: #013F8A;;
+    background: #61005D;
     color: white;
     transform: scale(1.1);
     border: 1px solid white;
    }
 
    button:hover {
-    background-color: #345b01;
+    background-color: #E3D9FF;
     color: white;
     transform: scale(1.1);
     border: 1px solid white;
@@ -109,7 +111,7 @@ header .content{
   
   .hero-section{
     align-items: flex-start;
-    background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+    background-image: linear-gradient(15deg, #EAAC47 0%, #CE8132 150%);
     display: flex;
     justify-content: center;
     padding: var(--spacing-xxl) var(--spacing-l);
@@ -217,7 +219,7 @@ header .content{
 .somosMais span{
     font-size: 19px;
     cursor: pointer;
-    text-shadow: #013F8A 0.5px 0.5px 18px;
+    color:#61005D;
 }
 
 /* ----------------Sessão 2------------------------ */
@@ -254,8 +256,8 @@ header .content{
     font-weight: 700;
     line-height: 43px;
     padding: 0 20px 2px;
-    background: #013F8A;
-    border: 1.5px solid  #1E5A6E;
+    background: #61005D;
+    border: 1.5px solid  #E3D9FF;
     color: #fff;
     display: flex;
     justify-content: first baseline;
@@ -280,7 +282,7 @@ header .content{
 .h3-sobre{
     font-size: 92pt;
     color: #CE8132;
-    font-family: 'Poppins','Alfa Slab One', cursive;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
@@ -381,23 +383,12 @@ header .content{
 
   /*-------------------- Comtate-nos ---------------------*/
 .teste{
-    background-image: url('../img/contato.jpeg');
-    background-size: cover;
-    background-position: inherit;
-    background-repeat: no-repeat;
-    padding: 50px;
-    position: relative;
+  align-items: flex-start;
+  background: rgb(206,129,50);
+  background: linear-gradient(90deg, rgba(206,129,50,1) 6%, rgba(227,165,71,1) 38%, rgba(234,172,71,1) 88%, rgba(206,129,50,1) 100%);  padding: 50px;
+  position: relative;
 }
 
-.teste::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2); 
-}
 
   .containerContato {
     background-color: #fffffea8;
