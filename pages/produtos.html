@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EstoqueToc | Usuários</title>
+    <title>EstoqueToc | Produtos</title>
     <link rel="stylesheet" href="../css/dashboard.css"/>
-    <link rel="stylesheet" href="../css/usuario.css"/>
+    <link rel="stylesheet" href="../css/produtos.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
     <link rel="website icon" href="../img/logo.jpeg" />
+    <script src="../js/produtos.js"></script>
+    <link rel="stylesheet" href="../js/produtos.js">
+    <script></script>
   </head>
 
   <body>
@@ -36,7 +39,7 @@
                 </a>
             </li>
             <li class="item-menu">
-                <a href="#">
+                <a href="./produtos.html">
                     <span class="icone"></span>
                     <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
                 </a>
@@ -59,12 +62,6 @@
                     <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
                 </a>
             </li>
-            <!--  <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Suporte<img src="..//img/suporte.png" alt=""></span>
-                </a>
-            </li> -->
             <li class="item-menu">
                 <a href="#">
                     <span class="icone"></span>
@@ -75,7 +72,7 @@
     </nav>
 
     <div class="header">
-        <a href="#default" class="logo">Produtos<img src="../img/icon-park-outline--add.svg" alt="adicionar novo usuario"></a> 
+        <a href="../pages/cadastroProdutos.html" class="logo">Produtos<img src="../img/icon-park-outline--add.svg" alt="adicionar novo usuario"></a> 
         <div class="header-right">
           <input type="search">
           <button class="pesquisar">Pesquisar</button>
@@ -83,38 +80,19 @@
     </div>
 
     <div class="container-usuarios">
+        <h1>Tela Principal</h1>
         <table class="tabela-usuario">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>ID</th>
                     <th>Produto</th>
                     <th>Quantidade</th>
                     <th>Preço Unitário</th>
                     <th>Status Estoque</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Pá</td>
-                    <td>16 UN</td>
-                    <td>R$23,90</td>
-                    <td class="ex1">Bom</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Arame 16mm</td>
-                    <td>5 RL</td>
-                    <td>R$150,98</td>
-                    <td class="ex2">Atenção</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Areia</td>
-                    <td>1 x SC40</td>
-                    <td>R$60,75</td>
-                    <td class="ex3">Urgência</td>
-                </tr>
+            <tbody id="products-table">
+                <!-- Os dados da tabela serão preenchidos dinamicamente via JavaScript -->
             </tbody>
         </table>
     </div>
@@ -122,6 +100,54 @@
     <footer class="footer">
         <p>&copy;EstoqueToc.</p>
     </footer>
+
+    <script>
+        // Função para preencher a tabela
+        function fillTable() {
+            // Simulação de dados, você deve substituir isso com dados reais
+            var products = [];
+
+            // Verifica se há parâmetros na URL (se veio de cadastroProdutos.html)
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('id') && urlParams.has('produto') && urlParams.has('quantidade') && urlParams.has('preco') && urlParams.has('status')) {
+                // Cria um novo produto com os parâmetros da URL
+                var newProduct = {
+                    id: urlParams.get('id'),
+                    produto: urlParams.get('produto'),
+                    quantidade: urlParams.get('quantidade'),
+                    preco: urlParams.get('preco'),
+                    status: urlParams.get('status')
+                };
+
+                // Adiciona o novo produto à lista de produtos
+                products.push(newProduct);
+            }
+
+            // Simulação de dados adicionais
+            products.push(
+                { id: 1, produto: 'Produto 1', quantidade: 10, preco: 50, status: 'Em Estoque' },
+                { id: 2, produto: 'Produto 2', quantidade: 20, preco: 30, status: 'Em Estoque' },
+                { id: 3, produto: 'Produto 3', quantidade: 5, preco: 100, status: 'Em Falta' }
+            );
+
+            var tableBody = document.getElementById('products-table');
+            tableBody.innerHTML = '';
+
+            products.forEach(function(product) {
+                var row = "<tr>" +
+                            "<td>" + product.id + "</td>" +
+                            "<td>" + product.produto + "</td>" +
+                            "<td>" + product.quantidade + "</td>" +
+                            "<td>" + product.preco + "</td>" +
+                            "<td>" + product.status + "</td>" +
+                          "</tr>";
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Preenche a tabela quando a página carrega
+        fillTable();
+    </script>
 
 </body>
 </html>

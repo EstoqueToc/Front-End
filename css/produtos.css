@@ -222,3 +222,93 @@ ul{
     bottom: 0;
     width: 100%;
 }
+
+.ex1{
+    background-color: rgba(0, 128, 0, 0.448);
+}
+.ex2{
+    background-color: rgba(255, 255, 0, 0.422);
+}
+.ex3{
+    background-color: rgba(255, 0, 0, 0.355);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 6% 0 7% 22%;
+}
+
+.conteudo{
+    width: 70%;
+    height: 70%;
+    padding: 4.5% 10%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.conteudo h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.conteudos {
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bnts{
+    display: flex;
+    justify-content: center;
+    gap: 35%;
+}
+
+.btnCadProduto {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Poppins';
+    background-color: white;
+    color: #000;
+    border: 2px solid #F3B44C; 
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btnCadProduto:hover {
+    background-color: #F3B44C; 
+    border-color: #F3B44C; 
+    color: #000;
+}
+
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input{
+    width: 200px;
+    padding: 8px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
