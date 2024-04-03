@@ -1,117 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EstoqueToc | Usuários</title>
-    <link rel="stylesheet" href="../css/dashboard.css"/>
-    <link rel="stylesheet" href="../css/usuario.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/usuario.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
     <link rel="website icon" href="../img/logo.jpeg" />
-  </head>
+</head>
 
-  <body>
-    <nav class="menu-lateral" id="menuLateral">
-        <div class="botao-menu" onclick="botaoMenu()">
-            <img src="../img/menu-hamburguer.png" alt="" />
-        </div>
-
-        <div class="usuario">
-            <h4 id="Empresa"></h4>
-            <img src="../img/usuario.png" alt="" />
-            <h4 id="Usuario"></h4>
-        </div>
-
-        <ul>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./dashboard.html">
-                    <span class="icone"></span>
-                    <span class="texto">Página Inicial</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./relatorios.html">
-                    <span class="icone"></span>
-                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./usuario.html">
-                    <span class="icone"></span>
-                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
-                </a>
-            </li>
-            <!--  <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Suporte<img src="..//img/suporte.png" alt=""></span>
-                </a>
-            </li> -->
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Sair</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<body>
 
     <div class="header">
-        <a href="#default" class="logo">Usuários<img src="../img/adicionar-usuario.png" alt="adicionar novo usuario"></a> 
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="usuario">
+                <h4 id="Empresa">Nome Empresa</h4>
+                <img src="../img/usuario.png" alt="" />
+                <h4 id="Usuario"></h4>
+            </div>
+            <ul>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icone"></span>
+                        <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="./dashboard.html">
+                        <span class="icone"></span>
+                        <span class="texto">Página Inicial</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icone"></span>
+                        <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icone"></span>
+                        <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="./relatorios.html">
+                        <span class="icone"></span>
+                        <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="./usuario.html">
+                        <span class="icone"></span>
+                        <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
+                    </a>
+                </li>
+                <!--  <li class="item-menu">
+                    <a href="#">
+                        <span class="icone"></span>
+                        <span class="texto">Suporte<img src="..//img/suporte.png" alt=""></span>
+                    </a>
+                </li> -->
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icone"></span>
+                        <span class="texto">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <span class="hamburger" onclick="openNav()">&#9776; </span>
+
+        <a href="#default" class="logo">Usuários<img src="../img/adicionar-usuario.png"
+                alt="adicionar novo usuario"></a>
         <div class="header-right">
-          <input type="search">
-          <button class="pesquisar">Pesquisar</button>
+            <input type="search">
+            <button class="pesquisar">Pesquisar</button>
         </div>
     </div>
 
-    <div class="container-usuarios">
-        <table class="tabela-usuario">
-            <thead>
-                <tr>
-                    <th>Nome de Usuário</th>
-                    <th>Email</th>
-                    <th>Função</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Raquel Guimarães</td>
-                    <td>raquel.guimaraes@example.com</td>
-                    <td>Admin</td>
-                    <td>Ativo</td>
-                </tr>
-                <tr>
-                    <td>Arthur Ciliberti</td>
-                    <td>arthur.ciliberti@example.com</td>
-                    <td>Admin</td>
-                    <td>Ativo</td>
-                </tr>
-            </tbody>
-        </table>
+
+    <div class="sec">
+        <div class="container-usuarios">
+            <table class="tabela-usuario">
+                <thead>
+                    <tr>
+                        <th>Nome de Usuário</th>
+                        <th>Email</th>
+                        <th>Função</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Raquel Guimarães</td>
+                        <td>raquel.guimaraes@example.com</td>
+                        <td>Admin</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>Arthur Ciliberti</td>
+                        <td>arthur.ciliberti@example.com</td>
+                        <td>Admin</td>
+                        <td>Ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <footer class="footer">
         <p>&copy;EstoqueToc.</p>
     </footer>
 
+    <script>
+        var tabela = document.querySelector(".container-usuarios")
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "20%";
+            tabela.style.width = "80%"
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            tabela.style.width = "100%"
+        }
+    </script>
+
 </body>
+
 </html>
