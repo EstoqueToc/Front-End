@@ -42,7 +42,7 @@ Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar 
 ## Instalação e Configuração
 Para começar com o **Music Box**, siga estes passos:
 1. **Clonar ou baixar o projeto**: Acesse o repositório e clone ou faça o download do código-fonte para sua máquina local.
-2. **Configuração do Ambiente**: Abra o diretório raiz do projeto (`music-box`) no Visual Studio Code (VS Code) e navegue até o terminal.
+2. **Configuração do Ambiente**: Abra o diretório raiz do projeto (`COLOCAR AQUI`) no Visual Studio Code (VS Code) e navegue até o terminal.
 3. **Instalação de Dependências**:
     ```
     npm install
