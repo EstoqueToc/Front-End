@@ -8,9 +8,15 @@
 
 # EstoqueToc: Uma organização focada na Automatização de Estoques de forma Tecnologica
 
-![Badge](https://img.shields.io/badge/Code-react-0366d6?&logo=react) 
-![Badge](https://img.shields.io/badge/Figma-layout-76608a?&logo=api)
-![Badge](https://img.shields.io/badge/API-integration-4c9d1f?&logo=api)
+## Tecnologias que Trabalhamos
+
+<div style="display: inline-block;"><br>
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" style="max-width:100%; color: #1572B6;">
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" style="max-width:100%; color: #E34F26;">
+      <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" style="max-width:100%; color: #F7DF1E;">      <img align="center" alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" style="max-width:100%; color: #007396;">
+   <img align="center" alt="SQL Server" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" style="max-width:100%; color: #CC2927;">
+   <img align="center" alt="Azure DevOps" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azuredevops/azuredevops-plain.svg" style="max-width:100%; color: #0078D7;">
+</div>
 
 
 ## Visão Geral
@@ -21,7 +27,12 @@ Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar 
 🔗 [Documentação](https://github.com/EstoqueToc/Documentation)   🔗 [Front-End](https://github.com/EstoqueToc/FrontEnd)  🔗 [Back-End](https://github.com/EstoqueToc/BackEnd)
 
 ## Destaques nos menbros do Projeto
-@Arthur-Ciliberti 
+[@Arthur-Ciliberti] https://github.com/Arthur-Ciliberti 
+[@Guss00] https://github.com/Guss00
+[@IsabelCAlberti] https://github.com/IsabelCAlberti
+[@jhonathaGC] https://github.com/jhonathaGC
+[@LucioGarciaRios] https://github.com/LucioGarciaRios
+[@raquelmiyy] https://github.com/raquelmiyy
 
 
 ## Face do projeto
