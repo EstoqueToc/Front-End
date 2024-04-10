@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EstoqueToc | Produtos</title>
-    <link rel="stylesheet" href="../css/dashboard.css"/>
-    <link rel="stylesheet" href="../css/produtos.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/produtos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
     <link rel="website icon" href="../img/logo.jpeg" />
     <script src="../js/produtos.js"></script>
     <link rel="stylesheet" href="../js/produtos.js">
     <script></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="menu-lateral" id="menuLateral">
         <div class="botao-menu" onclick="botaoMenu()">
             <img src="../img/menu-hamburguer.png" alt="" />
@@ -72,15 +73,56 @@
     </nav>
 
     <div class="header">
-        <a href="../pages/cadastroProdutos.html" class="logo">Produtos<img src="../img/icon-park-outline--add.svg" alt="adicionar novo usuario"></a> 
+        <a href="../pages/cadastroProdutos.html" class="logo">Produtos<img src="../img/icon-park-outline--add.svg"
+                alt="adicionar novo usuario"></a>
         <div class="header-right">
-          <input type="search">
-          <button class="pesquisar">Pesquisar</button>
+            <input type="search">
+            <button class="pesquisar">Pesquisar</button>
         </div>
     </div>
 
     <div class="container-usuarios">
-        <h1>Tela Principal</h1>
+        
+        <h1>Todos seus produtos</h1> <br>
+        <div id="quadrado">
+        <div class="cabecalho" id="cabecalho">
+            <img src="../img/oui--arrow-up.svg" alt="" class="rotate">
+            <h3>Aperte aqui para configurar os status de estoque</h3>
+        </div>
+            <div id="campos">
+                <div class="inputs-informations">
+                    <div>
+                        <label for="alto">Quantidade de estoque considerado alto:</label>
+                        <input type="text" id="alto" placeholder="Coloque um valor" onclick="event.stopPropagation();">
+                    </div>
+                    <div>
+                        <label for="medio">Quantidade de estoque considerado médio:</label>
+                        <input type="text" id="medio" placeholder="Coloque um valor" onclick="event.stopPropagation();">
+                    </div>
+                    <div>
+                        <label for="falta">Quantidade de estoque considerado baixo:</label>
+                        <input type="text" id="falta" placeholder="Coloque um valor" onclick="event.stopPropagation();">
+                    </div>
+                </div>
+                <div class="botaoCadStatus">
+                    <button class="btnCadStatus" onclick="event.stopPropagation();">Salvar</button>
+                </div>
+            </div>
+        </div> <br><br>
+
+        <h4>Filtros de Status do seu Estoque</h4>
+        <div class="filtroStatus">
+            <div>
+                <input type="radio" name="prioridade">Alto
+            </div>
+            <div>
+                <input type="radio" name="prioridade">Médio
+            </div>
+            <div>
+                <input type="radio" name="prioridade">Baixo
+            </div>
+        </div>
+
         <table class="tabela-usuario">
             <thead>
                 <tr>
@@ -89,12 +131,17 @@
                     <th>Quantidade</th>
                     <th>Preço Unitário</th>
                     <th>Status Estoque</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody id="products-table">
                 <!-- Os dados da tabela serão preenchidos dinamicamente via JavaScript -->
             </tbody>
-        </table>
+        </table> <br><br>
+
+        <button class="exportarRelatorio">
+            <img src="../img/tabler--file-export (1).svg" alt="">Exportar Relatório
+        </button>
     </div>
 
     <footer class="footer">
@@ -123,31 +170,30 @@
                 products.push(newProduct);
             }
 
-            // Simulação de dados adicionais
-            products.push(
-                { id: 1, produto: 'Produto 1', quantidade: 10, preco: 50, status: 'Em Estoque' },
-                { id: 2, produto: 'Produto 2', quantidade: 20, preco: 30, status: 'Em Estoque' },
-                { id: 3, produto: 'Produto 3', quantidade: 5, preco: 100, status: 'Em Falta' }
-            );
-
             var tableBody = document.getElementById('products-table');
             tableBody.innerHTML = '';
 
-            products.forEach(function(product) {
-                var row = "<tr>" +
-                            "<td>" + product.id + "</td>" +
-                            "<td>" + product.produto + "</td>" +
-                            "<td>" + product.quantidade + "</td>" +
-                            "<td>" + product.preco + "</td>" +
-                            "<td>" + product.status + "</td>" +
-                          "</tr>";
+            products.forEach(function (product) {
+                    var row = "<tr>" +
+                    "<td>" + product.id + "</td>" +
+                    "<td>" + product.produto + "</td>" +
+                    "<td>" + product.quantidade + "</td>" +
+                    "<td>" + product.preco + "</td>" +
+                    "<td>" + product.status + "</td>" +
+                    "<td><a href='../pages/alterarProduto.html'><img src='../img/editar.png' alt='Editar' style='width: 20px; height: 20px;'></a></td>" + // Adiciona a imagem de editar
+                    "</tr>";
                 tableBody.innerHTML += row;
             });
         }
 
         // Preenche a tabela quando a página carrega
         fillTable();
+
+        document.getElementById("quadrado").addEventListener("click", function () {
+            this.classList.toggle("ampliado");
+        });
     </script>
 
 </body>
+
 </html>

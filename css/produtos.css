@@ -312,3 +312,97 @@ label{
     margin: 8px 0;
     box-sizing: border-box;
 }
+
+#quadrado {
+    border: 1px solid #ddd;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+#quadrado.ampliado {
+    width: 100%;
+    height: 15rem;
+}
+#campos {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4%;
+}
+#quadrado.ampliado #campos{
+    display: block;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+}
+
+.botaoCadStatus{
+    align-items: center;
+    padding-top: 3%;
+}
+
+.btnCadStatus {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Poppins';
+    background-color: white;
+    color: #000;
+    border: 2px solid #F3B44C; 
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btnCadStatus:hover {
+    background-color: #F3B44C; 
+    border-color: #F3B44C; 
+    color: #000;
+}
+
+.inputs-informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.filtroStatus{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 1% 3% 0;
+}
+
+.exportarRelatorio {
+    display: flex;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Poppins';
+    background-color: white;
+    color: #000;
+    border: 2px solid #F3B44C; 
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.exportarRelatorio img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+}
+
+.exportarRelatorio:hover {
+    background-color: #F3B44C; 
+    border-color: #F3B44C; 
+    color: #000;
+}
