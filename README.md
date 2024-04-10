@@ -27,12 +27,9 @@ Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar 
 🔗 [Documentação](https://github.com/EstoqueToc/Documentation)   🔗 [Front-End](https://github.com/EstoqueToc/FrontEnd)  🔗 [Back-End](https://github.com/EstoqueToc/BackEnd)
 
 ## Destaques nos menbros do Projeto
-[@Arthur-Ciliberti] https://github.com/Arthur-Ciliberti 
-[@Guss00] https://github.com/Guss00
-[@IsabelCAlberti] https://github.com/IsabelCAlberti
-[@jhonathaGC] https://github.com/jhonathaGC
-[@LucioGarciaRios] https://github.com/LucioGarciaRios
-[@raquelmiyy] https://github.com/raquelmiyy
+[@Arthur-Ciliberti] https://github.com/Arthur-Ciliberti | [@Guss00] https://github.com/Guss00 </br>
+[@IsabelCAlberti] https://github.com/IsabelCAlberti     | [@jhonathaGC] https://github.com/jhonathaGC </br>
+[@LucioGarciaRios] https://github.com/LucioGarciaRios   | [@raquelmiyy] https://github.com/raquelmiyy </br>
 
 
 ## Face do projeto
