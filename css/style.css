@@ -8,13 +8,14 @@
   
   html{
     height: 100%;
-    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.6; 
   }
 
   body{
     height: 100%;
+   background-color: #f7eeee;
+   font-family: 'Roboto', sans-serif;
   }
   
 /*-------------------- Scrollbar ---------------------*/
