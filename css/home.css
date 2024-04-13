@@ -156,13 +156,14 @@ h1 {
 .card-s2 p{
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin-top: 1.8rem; 
-  margin-bottom: 1.8rem;;
+  margin-top: 1.2rem; 
+  margin-bottom: 1.2rem;
 }
 
 .card-s2 img {
-  width: 80px;
-  margin-right: 12px;
+  width: 90px;
+  margin-right: 20px;
+  margin-left: 12px;
 }
 
 hr {
