@@ -10,6 +10,7 @@ body{
     background-color: #fff;
 }
 
+
 .content h2{
     margin: 20px 0 30px;
 }
@@ -36,6 +37,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     background-color: #ffffff1c;
     height: 50px;
     width: 150px;
@@ -71,8 +73,8 @@ ul{
 .menu-lateral {
     position: fixed;
     top: 0;
-    left: -260px; 
-    width: 300px;
+    left: -240px; 
+    width: 280px;
     height: 100%;
     background-color: #F3B44C;
     color: #fff;
@@ -115,6 +117,75 @@ ul{
     left: 0;
 }
 
+.dashboard {
+    display: flex;
+    height: 100%;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 21px;
+}
+
+.card {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Bordas arredondadas aqui */
+    border: 2px solid #ddd;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #FFFFFF;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1em;
+}
+
+.card p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.positive {
+    color: #4CAF50;
+}
+
+.negative {
+    color: #F44336;
+}
+
+.chart {
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px; /* Bordas arredondadas também aplicadas ao gráfico */
+}
+
+#revenueChart {
+    display: block;
+    width: 100%;
+    height: auto; /* Altura automática */
+    max-height: 550px; /* Máximo de altura para o gráfico */
+}
+
+.chart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 
