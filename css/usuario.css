@@ -121,14 +121,22 @@
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 10px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+.sidenav .closebtn img{
+    width: 50px;
 }
 
 .hamburger {
     font-size: 30px;
     cursor: pointer;
+}
+
+.hamburger img{
+    width: 50px;
 }
 
 @media screen and (max-height: 450px) {
@@ -142,54 +150,6 @@
 }
 
 /*MENU LATERALLL*/
-
-
-
-
-
-/*TABELA DE USUARIO*/
-.sec{
-    display: flex;
-    justify-content: right;
-}
-.container-usuarios {
-    direction: rtl;
-    display: flex;
-    justify-content: right;
-    margin: 50px 0;
-    width: 100%;
-    transition: 0.5s;
-}
-
-.tabela-usuario {
-    width: 80%;
-    margin-right: 7%;
-    border-collapse: collapse;
-}
-
-.tabela-usuario th,
-.tabela-usuario td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.tabela-usuario th {
-    background-color: #f2f2f2;
-}
-
-
-/*FOOTER*/
-.footer {
-    background-color: #f2f2f2;
-    color: #888;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 .botao-menu img{
     width: 50px;
 }
@@ -235,18 +195,145 @@ ul{
     color: #fff;
     padding: 0 0 0 0;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .usuario img{
-    width: 30%;
+    width: 25%;
 }
 
- ul {
+ul {
     list-style: none;
     padding: 0;
 }
 
- li {
+li {
     margin: 5px 0;
 }
+
+
+
+/*TABELA DE USUARIO*/
+.sec{
+    display: flex;
+    justify-content: right;
+}
+.container-usuarios {
+    direction: rtl;
+    display: flex;
+    justify-content: right;
+    margin: 50px 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.tabela-usuario {
+    width: 80%;
+    margin-right: 7%;
+    border-collapse: collapse;
+}
+
+.tabela-usuario th,
+.tabela-usuario td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela-usuario th {
+    background-color: #f2f2f2;
+}
+
+
+/*CARD ADICIONAR USUARIO*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 6% 0 7% 22%;
+}
+
+.conteudo{
+    width: 70%;
+    height: 70%;
+    padding: 4.5% 10%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.conteudo h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.conteudos {
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bnts{
+    display: flex;
+    justify-content: center;
+    gap: 35%;
+}
+
+.btnCadUsuario {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Poppins';
+    background-color: white;
+    color: #000;
+    border: 2px solid #F3B44C; 
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btnCadUsuario:hover {
+    background-color: #F3B44C; 
+    border-color: #F3B44C; 
+    color: #000;
+}
+
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input{
+    width: 200px;
+    padding: 8px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #f2f2f2;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 

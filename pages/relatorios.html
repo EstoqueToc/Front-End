@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EstoqueToc | Usuários</title>
-    <link rel="stylesheet" href="../css/dashboard.css"/>
-    <link rel="stylesheet" href="../css/usuario.css"/>
-    <link rel="stylesheet" href="../css/relatorio.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
-    <link rel="website icon" href="../img/logo.jpeg" />
-  </head>
 
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/relatorio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>EstoqueToc | Relatórios </title>
+</head>
+
+<body>
+
     <nav class="menu-lateral" id="menuLateral">
         <div class="botao-menu" onclick="botaoMenu()">
             <img src="../img/menu-hamburguer.png" alt="" />
@@ -25,19 +26,13 @@
 
         <ul>
             <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
                 <a href="./dashboard.html">
                     <span class="icone"></span>
                     <span class="texto">Página Inicial</span>
                 </a>
             </li>
             <li class="item-menu">
-                <a href="#">
+                <a href="./produtos.html">
                     <span class="icone"></span>
                     <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
                 </a>
@@ -55,12 +50,11 @@
                 </a>
             </li>
             <li class="item-menu">
-                <a href="../pages/usuario.html">
+                <a href="./usuario.html">
                     <span class="icone"></span>
                     <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
                 </a>
             </li>
-        
             <li class="item-menu">
                 <a href="#">
                     <span class="icone"></span>
@@ -70,47 +64,128 @@
         </ul>
     </nav>
 
-    <div class="header">
-        <a href="#default" class="logo">Relatórios</a> 
-        <div class="header-right">
-          <input type="search">
-          <button class="pesquisar">Pesquisar</button>
+    <div class="dashboard">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <h4>FastTotem</h4>
+                </div>
+                <h4 class="title">Relatórios</h4>
+                <div class="navbar">
+                    <a onclick="abrirPerfil()"><img class="nav-icon" src="./assets/profile-user.png" alt=""></a>
+                    <a href="https://app.pipefy.com/public/form/C1FK3mWC"><img class="nav-icon"
+                            src="./assets/customer-service.png" alt=""></a>
+                </div>
+            </div>
         </div>
+
+        <main class="grid">
+            <div class="relatorios-main">
+                <div class="relatorios-list">
+                    <div class="list">
+                        <div onclick="mudarCard('capturas')" class="relatorio-card" id="capturas-button">
+                            <p>Capturas</p>
+                        </div>
+                        <div onclick="mudarCard('totens')" class="relatorio-card" id="totens-button">
+                            <p>Totens</p>
+                        </div>
+                        <div onclick="mudarCard('parametros')" class="relatorio-card" id="parametros-button">
+                            <p>Parâmetros</p>
+                        </div>
+                        <div onclick="mudarCard('funcionarios')" class="relatorio-card" id="funcionarios-button">
+                            <p>Funcionários</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relatorios-get">
+                    <div class="relatorio-get-card" id="capturas-card">
+
+                        <h1>Relatório de Capturas</h1>
+
+                        <div>
+                            <label for="dataInicial">Data Inicial:</label>
+                            <input type="date" id="dataInicialcapturas" name="dataInicial">
+                        </div>
+
+                        <div>
+                            <label for="dataFinal">Data Final:</label>
+                            <input type="date" id="dataFinalcapturas" name="dataFinal">
+                        </div>
+                        <span id="errorMessage"></span>
+                        <button onclick="validarCampos()">Gerar Relatório</button>
+                    </div>
+
+                    <div class="relatorio-get-card" id="totens-card">
+
+                        <h1>Relatório de Totens</h1>
+
+                        <div>
+                            <label for="dataInicial">Data Inicial:</label>
+                            <input type="date" id="dataInicialtotens" name="dataInicial">
+                        </div>
+
+                        <div>
+                            <label for="dataFinal">Data Final:</label>
+                            <input type="date" id="dataFinaltotens" name="dataFinal">
+                        </div>
+                        <span id="errorMessage"></span>
+                        <button onclick="validarCampos()">Gerar Relatório</button>
+                    </div>
+
+                    <div class="relatorio-get-card" id="parametros-card">
+
+                        <h1>Relatório de Parâmetros</h1>
+
+                        <div>
+                            <label for="dataInicial">Data Inicial:</label>
+                            <input type="date" id="dataInicialparametros" name="dataInicial">
+                        </div>
+
+                        <div>
+                            <label for="dataFinal">Data Final:</label>
+                            <input type="date" id="dataFinalparametros" name="dataFinal">
+                        </div>
+                        <span id="errorMessage"></span>
+                        <button onclick="validarCampos()">Gerar Relatório</button>
+                    </div>
+
+                    <div class="relatorio-get-card" id="funcionarios-card">
+
+                        <h1>Relatório de Funcionários</h1>
+
+                        <div>
+                            <label for="dataInicial">Data Inicial:</label>
+                            <input type="date" id="dataInicialfuncionarios" name="dataInicial">
+                        </div>
+
+                        <div>
+                            <label for="dataFinal">Data Final:</label>
+                            <input type="date" id="dataFinalfuncionarios" name="dataFinal">
+                        </div>
+                        <span id="errorMessage"></span>
+                        <button onclick="validarCampos()">Gerar Relatório</button>
+                    </div>
+                    
+                </div>
+
+            </div>
     </div>
+    </main>
 
-    <div class="container">
-        <div class="column">
-            <h2>Atividades</h2>
-            <ul>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-            </ul>
-        </div>
-        
-        <div class="column">
-            <h2>Vendas</h2>
-            <ul>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-            </ul>
-        </div>
-        
-        <div class="column">
-            <h2>Estoque</h2>
-            <ul>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-                <li><img src="../img/selecione.png" alt=""> Atividade 1</li>
-            </ul>
-        </div>
     </div>
-
-
-    <footer class="footer">
-        <p>&copy;EstoqueToc.</p>
-    </footer>
 
 </body>
+
 </html>
+<script>
+    function botaoMenu() {
+        var menu = document.getElementById("menu");
+        var botaoMenuImg = document.getElementById("botaoMenuImg");
+
+        menuLateral.classList.toggle("ver-menu");
+        botaoMenuImg.style.display = menuLateral.classList.contains("ver-menu") ? "none" : "block";
+
+        var content = document.querySelector(".content");
+        content.classList.toggle("content-shift");
+    }
+</script>
