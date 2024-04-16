@@ -139,10 +139,16 @@ ul{
     border: 2px solid #ddd;
 }
 
+.sec{
+    display: flex;
+    justify-content: right;
+}
+
 .main-content {
-    flex-grow: 1;
+    width: 100%;
     padding: 20px;
     background: #FFFFFF;
+    transition: 0.5s;
 }
 
 .card:last-child {
