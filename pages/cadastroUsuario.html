@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstoqueToc | Cadastro de Usuários</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/usuario.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+</head>
+<body>
+    <nav class="menu-lateral" id="menuLateral">
+        <div class="botao-menu" onclick="botaoMenu()">
+            <img src="../img/menu-hamburguer.png" alt="" />
+        </div>
+
+        <div class="usuario">
+            <h4 id="Empresa">Empresa ABC</h4>
+            <img src="../img/usuario.png" alt="" />
+            <p id="Usuario">Raquel Guimarães</p>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./dashboard.html">
+                    <span class="icone"></span>
+                    <span class="texto">Página Inicial</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./estoque.html">
+                    <span class="icone"></span>
+                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./relatorios.html">
+                    <span class="icone"></span>
+                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./usuario.html">
+                    <span class="icone"></span>
+                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="conteudo">
+            <h1>Cadastro de Usuários</h1>
+            <form class="form" id="usuario-form">
+                <div class="conteudos">
+                    <div class="left">
+                        <label for="usuario">Usuario:</label>
+                        <input class="input" type="text" id="usuario" name="Usuario">
+    
+                        <label for="email">Email:</label>
+                        <input class="input" type="email" id="email" name="email">
+                    </div>
+    
+                    <div class="right">
+                        <label for="funcao">Função:</label>
+                        <input class="input" type="text" id="funcao" name="funcao">
+    
+                        <label for="status">Status:</label>
+                        <input class="input" type="text" id="status" name="status"> <br>
+                    </div>
+                </div>
+                <div class="bnts">
+                    <button class="btnCadUsuario" type="button" onclick="window.history.back();">Cancelar</button>
+                    <input class="btnCadUsuario" type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div> 
+
+    <footer class="footer">
+        <p>&copy;EstoqueToc.</p>
+    </footer>
+</body>
+</html>
+<script>
+    function botaoMenu() {
+        var menu = document.getElementById("menu");
+        var botaoMenuImg = document.getElementById("botaoMenuImg");
+
+        menuLateral.classList.toggle("ver-menu");
+        botaoMenuImg.style.display = menuLateral.classList.contains("ver-menu") ? "none" : "block";
+
+        var content = document.querySelector(".content");
+        content.classList.toggle("content-shift");
+    }
+</script>
