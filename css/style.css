@@ -1,0 +1,72 @@
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.6; 
+  }
+
+  body{
+    height: 100%;
+   background-color: #f7eeee;
+   font-family: 'Roboto', sans-serif;
+  }
+  
+/*-------------------- Scrollbar ---------------------*/
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  height: 50%;
+  border-radius: 6px; /* Raio do arredondamento */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  max-height: 10px;
+}
+
+/* Cursor da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #8888885b; /* Cor do cursor */
+  border-radius: 6px; /* Raio do arredondamento */
+}
+
+
+/*------------Breadcrumb------------*/
+ul.breadcrumb{
+  padding: 1px 16px;
+  list-style: momne;
+  background-color: white;
+}
+
+ul.breadcrumb li{
+  display: inline;
+  font-size: 12px;
+}
+
+ul.breadcrumb li+li:before{
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a{
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstoqueToc | Cadastro de Produtos</title>
+    <link rel="stylesheet" href="../css/dashboard.css"/>
+    <link rel="stylesheet" href="../css/produtos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+</head>
+<body>
+    <nav class="menu-lateral" id="menuLateral">
+        <div class="botao-menu" onclick="botaoMenu()">
+            <img src="../img/menu-hamburguer.png" alt="" />
+        </div>
+
+        <div class="usuario">
+            <h4 id="Empresa"></h4>
+            <img src="../img/usuario.png" alt="" />
+            <h4 id="Usuario"></h4>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./dashboard.html">
+                    <span class="icone"></span>
+                    <span class="texto">Página Inicial</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./produtos.html">
+                    <span class="icone"></span>
+                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./relatorios.html">
+                    <span class="icone"></span>
+                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="./usuario.html">
+                    <span class="icone"></span>
+                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icone"></span>
+                    <span class="texto">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="conteudo">
+            <h1>Atualização de Produtos</h1>
+            <form class="form" id="product-form">
+                <div class="conteudos">
+                    <div class="left">
+                        <label for="id">ID:</label>
+                        <input class="input" type="text" id="id" name="id">
+    
+                        <label for="produto">Produto:</label>
+                        <input class="input" type="text" id="produto" name="produto">
+    
+                        <label for="status">Status Estoque:</label>
+                        <input class="input" type="text" id="status" name="status"> <br>
+                    </div>
+    
+                    <div class="right">
+                        <label for="quantidade">Quantidade:</label>
+                        <input class="input" type="text" id="quantidade" name="quantidade">
+    
+                        <label for="preco">Preço Unitário:</label>
+                        <input class="input" type="text" id="preco" name="preco">
+    
+                        <label for="descricao">Descrição:</label>
+                        <input class="input" type="text" id="descricao" name="descricao"> <br>
+                    </div>
+                </div>
+                <div class="bnts">
+                    <button class="btnCadProduto" type="button" onclick="window.history.back();">Cancelar</button>
+                    <input class="btnCadProduto" type="submit" value="Atualizar">
+                </div>
+            </form>
+        </div>
+    </div> 
+
+    <footer class="footer">
+        <p>&copy;EstoqueToc.</p>
+    </footer>
+
+    <script>
+        // Captura o formulário de edição
+        var editForm = document.getElementById('product-form');
+
+        // Adiciona um evento de envio ao formulário
+        editForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Coleta os novos valores dos campos do formulário
+            var id = document.getElementById('id').value;
+            var produto = document.getElementById('produto').value;
+            var quantidade = document.getElementById('quantidade').value;
+            var preco = document.getElementById('preco').value;
+            var status = document.getElementById('status').value;
+            var descricao = document.getElementById('descricao').value;
+
+            // Aqui você deve enviar uma solicitação para atualizar o produto com os novos valores
+            // Por exemplo, usando AJAX para enviar os dados para o backend e atualizar o produto no banco de dados
+
+            // Após a atualização bem-sucedida, redirecione para a página de produtos
+            window.location.href = '../pages/produtos.html';
+        });
+    </script>
+</body>
+</html>
