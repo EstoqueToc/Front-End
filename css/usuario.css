@@ -213,6 +213,7 @@ li {
 
 
 
+<<<<<<< HEAD
 /*TABELA DE USUARIO*/
 .sec{
     display: flex;
@@ -337,3 +338,16 @@ label{
 }
 
 
+=======
+
+
+
+
+
+
+.teste{
+    width: 30%;
+    height: 30vh;
+    background: #000;
+}
+>>>>>>> a0a30f86472c4e516b4be60085ee0ebbed230565
