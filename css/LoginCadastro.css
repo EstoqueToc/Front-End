@@ -54,7 +54,8 @@
 
 .alternar01 h1, .alternar01 p, #pagina{
     transition: 0.6s ease-in-out;
-    margin-right: 35px;
+    margin-right: 20px;
+    width: 97%;
 }
 
 .alternar-container{
@@ -86,6 +87,12 @@
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
+
+.alternar-esquerda p, .alternar-esquerda h1, .alternar-esquerda button{
+    margin-right: 50px;
+    width: 80%;
+}
+
 
 .alternar01{
     height: 100%;

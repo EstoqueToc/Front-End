@@ -8,3 +8,4 @@ cadastrarBtn.addEventListener('click', () => {
 entrarBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
