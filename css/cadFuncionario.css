@@ -111,8 +111,7 @@
     color: #888;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
+ 
     width: 100%;
 }
 
@@ -132,24 +131,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    padding: 6% 0 7% 22%;
+    max-width: 70%;
+    margin: 20px auto;
 }
 
 .conteudo{
-    width: 70%;
-    height: 70%;
-    padding: 4.5% 10%;
-    display: flex;
-    flex-direction: column;
     border: 1px solid #ddd;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    width: 100%;
+    margin-bottom: 32px;
 }
 
 .conteudo h1{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 32px;
+    margin-top: 32px;
 }
 
 .conteudos {
@@ -160,7 +158,8 @@
 .left{
     display: flex;
     flex-direction: column;
-    padding-right: 20%;
+    margin-right: 16px;
+    width: 50%;
 }
 
 .right{
@@ -172,10 +171,11 @@
 .bnts{
     display: flex;
     justify-content: center;
-    gap: 35%;
+    gap: 25%;
+    margin-bottom: 32px;
 }
 
-.btnCadProduto {
+.btnCadFunc {
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
@@ -188,7 +188,7 @@
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
-.btnCadProduto:hover {
+.btnCadFunc:hover {
     background-color: #F3B44C; 
     border-color: #F3B44C; 
     color: #000;
@@ -201,9 +201,10 @@ label{
 
 .input{
     width: 200px;
-    padding: 8px 15px;
+    padding: 8px 150px;
     margin: 8px 0;
     box-sizing: border-box;
+    border: #000 solid 1px;
 }
 
 #quadrado {
