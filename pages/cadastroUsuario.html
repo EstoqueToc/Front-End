@@ -4,125 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" type="png" href="../img/Logo.png"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cadastroUsuario.css">
+    <link rel="stylesheet" href="../css/cadFuncionario.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/cadFuncionario.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Cadastrar Usuário</title>
+
+    <title>Cadastro de Funcionário</title>
+
 </head>
 <body>
-    
+    <div class="superior">
+        <div class="perfil">
+            <h6 class="empresa">Empresa x Ltda</h6>
+            <img src="../img/usuario.png" alt="" class="fotoPerfil" />
+        </div>
+    </div>
 
-    <body>
-        <div class="superior">
-          <div class="perfil">
-              <h6 class="empresa">Empresa x Ltda</h6>
-              <img src="../img/usuario.png" alt="" class="fotoPerfil" />s
-          </div>
-      </div>
-          <section class="breadcrumbSuperior">
-              <ul class="breadcrumb">
-                  <li><a href="./home.html">Home</a></li>
-                  <li><a href="#" class="localAtual">Pégina Inicial</a></li>
-              </ul>
-          </section>
+    <section class="breadcrumbSuperior">
+        <ul class="breadcrumb">
+            <li><a href="./inicial.html">Home</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#" class="localAtual">Cadastrar Usuário</a></li>
+        </ul>
+    </section>
+    <nav class="main-menu">
+        <div>
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="scrollbar" id="style-1">
 
-          <nav class="main-menu">
-            <div>
-                <img src="../img/Logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="scrollbar" id="style-1">
+            <ul>
+                <li class="item-menu">
+                    <a href="./inicial.html">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Página Inicial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
+                        <i class="fa fa-user fa-lg"></i>
+                        <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-funcionario" style="display: none;">
+                        <li>
+                            <a href="cadastroUsuario.html">
+                                <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
+                                <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
+                                    Funcionário</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
+                        <i class="fa fa-boxes fa-lg"></i>
+                        <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-estoque" style="display: none;">
+                        <li>
+                            <a href="cadastroProdutos.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Cadastrar Produto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastroFornecedor.html">
+                                <i class="fa fa-truck fa-sm"></i>
+                                <span class="nav-text">Cadastrar Fornecedor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fa fa-chart-line fa-sm"></i>
+                                <span class="nav-text">Análise do Estoque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estoque.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Meu Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-relatorios" style="display: none;">
+                        <li>
+                            <a href="relatorios.html">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="nav-text">Gerar Relatório</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-lg"></i>
+                        <span class="nav-text">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out-alt fa-lg"></i>
+                        <span class="nav-text">Sair</span>
+                    </a>
+                </li>
+                </li>
+            </ul>
+    </nav>
+
+
+    <div class="container">
+        <div class="conteudo">
+            <h1>Cadastro de Produtos</h1>
+            <form class="form" id="product-form">
+                <div class="conteudos">
+                    <div class="left">
+                        <label for="id">ID:</label>
+                        <input class="input" type="text" id="id" name="id">
     
-                <ul>
-                    <li class="item-menu">
-                        <a href="./inicial.html">
-                            <i class="fa fa-home fa-lg"></i>
-                            <span class="nav-text">Página Inicial</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
-                            <i class="fa fa-user fa-lg"></i>
-                            <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
-                        </a>
-                        <ul id="submenu-funcionario" style="display: none;">
-                            <li>
-                                <a href="cadastroUsuario.html">
-                                    <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
-                                    <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
-                                        Funcionário</span></a>
-                            </li>
-                        </ul>
-                    </li>
+                        <label for="produto">Produto:</label>
+                        <input class="input" type="text" id="produto" name="produto">
     
-                    <li>
-                        <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
-                            <i class="fa fa-boxes fa-lg"></i>
-                            <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
-                        </a>
-                        <ul id="submenu-estoque" style="display: none;">
-                            <li>
-                                <a href="cadastroProdutos.html">
-                                    <i class="fa fa-cube fa-sm"></i>
-                                    <span class="nav-text">Cadastrar Produto</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="cadastroFornecedor.html">
-                                    <i class="fa fa-truck fa-sm"></i>
-                                    <span class="nav-text">Cadastrar Fornecedor</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dashboard.html">
-                                    <i class="fa fa-chart-line fa-sm"></i>
-                                    <span class="nav-text">Análise do Estoque</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="estoque.html">
-                                    <i class="fa fa-cube fa-sm"></i>
-                                    <span class="nav-text">Meu Estoque</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                        <label for="status">Status Estoque:</label>
+                        <input class="input" type="text" id="status" name="status"> <br>
+                    </div>
     
-                    <li>
-                        <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
-                            <i class="fa fa-file fa-lg"></i>
-                            <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
-                        </a>
-                        <ul id="submenu-relatorios" style="display: none;">
-                            <li>
-                                <a href="relatorios.html">
-                                    <i class="fa fa-file fa-lg"></i>
-                                    <span class="nav-text">Gerar Relatório</span></a>
-                            </li>
-                        </ul>
-                    </li>
+                    <div class="right">
+                        <label for="quantidade">Quantidade:</label>
+                        <input class="input" type="text" id="quantidade" name="quantidade">
     
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-envelope fa-lg"></i>
-                            <span class="nav-text">Contato</span>
-                        </a>
-                    </li>
+                        <label for="preco">Preço Unitário:</label>
+                        <input class="input" type="text" id="preco" name="preco">
     
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-question-circle fa-lg"></i>
-                            <span class="nav-text">Ajuda</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-sign-out-alt fa-lg"></i>
-                            <span class="nav-text">Sair</span>
-                        </a>
-                    </li>
-                    </li>
-                </ul>
-        </nav>
+                        <label for="status">Descrição:</label>
+                        <input class="input" type="text" id="status" name="status"> <br>
+                    </div>
+                </div>
+                <div class="bnts">
+                    <button class="btnCadProduto" type="button" onclick="window.history.back();">Cancelar</button>
+                    <input class="btnCadProduto" type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div> 
+
+    <footer class="footer">
+        <p>&copy;EstoqueToc.</p>
+    </footer>
+
 </body>
 </html>
 <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
