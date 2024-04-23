@@ -5,81 +5,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-    <link rel="website icon" href="../img/logo.jpeg" />
-    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="website icon" type="png" href="../img/Logo.png"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../js/usuario.js">
     <title>EstoqueToc | Dashboard</title>
 </head>
 
 <body>
-    <div class="header">
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="usuario">
-                <h4 id="Empresa">Nome Empresa</h4>
-                <img src="../img/usuario.png" alt="" />
-                <h4 id="Usuario"></h4>
-            </div>
-            <ul>
-                <li class="item-menu">
-                    <a href="#">
-                        <span class="icone"></span>
-                        <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="./dashboard.html">
-                        <span class="icone"></span>
-                        <span class="texto">Página Inicial</span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="../pages/produtos.html">
-                        <span class="icone"></span>
-                        <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="#">
-                        <span class="icone"></span>
-                        <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="./relatorios.html">
-                        <span class="icone"></span>
-                        <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="./usuario.html">
-                        <span class="icone"></span>
-                        <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
-                    </a>
-                </li>
-                <!--  <li class="item-menu">
-                    <a href="#">
-                        <span class="icone"></span>
-                        <span class="texto">Suporte<img src="..//img/suporte.png" alt=""></span>
-                    </a>
-                </li> -->
-                <li class="item-menu">
-                    <a href="#">
-                        <span class="icone"></span>
-                        <span class="texto">Sair</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <span class="hamburger" onclick="openNav()">&#9776; </span>
-
-        <div class="header-right">
-            <input type="search">
-            <button class="pesquisar">Pesquisar</button>
+    <div class="superior">
+        <div class="perfil">
+            <h6 class="empresa">Empresa x Ltda</h6>
+            <img src="../img/usuario.png" alt="" class="fotoPerfil" />
         </div>
     </div>
+
+    <section class="breadcrumbSuperior">
+        <ul class="breadcrumb">
+            <li><a href="./inicial.html">Home</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#" class="localAtual"> Gerar Relatório</a></li>
+        </ul>
+    </section>
+    <nav class="main-menu">
+        <div>
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="scrollbar" id="style-1">
+
+            <ul>
+                <li class="item-menu">
+                    <a href="./inicial.html">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Página Inicial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
+                        <i class="fa fa-user fa-lg"></i>
+                        <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-funcionario" style="display: none;">
+                        <li>
+                            <a href="cadastroUsuario.html">
+                                <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
+                                <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
+                                    Funcionário</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
+                        <i class="fa fa-boxes fa-lg"></i>
+                        <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-estoque" style="display: none;">
+                        <li>
+                            <a href="cadastroProdutos.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Cadastrar Produto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastroFornecedor.html">
+                                <i class="fa fa-truck fa-sm"></i>
+                                <span class="nav-text">Cadastrar Fornecedor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fa fa-chart-line fa-sm"></i>
+                                <span class="nav-text">Análise do Estoque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estoque.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Meu Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-relatorios" style="display: none;">
+                        <li>
+                            <a href="relatorios.html">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="nav-text">Gerar Relatório</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-lg"></i>
+                        <span class="nav-text">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out-alt fa-lg"></i>
+                        <span class="nav-text">Sair</span>
+                    </a>
+                </li>
+                </li>
+            </ul>
+    </nav>
+
     <div class="sec">
         <main class="main-content">
             <section class="cards">
@@ -161,3 +207,6 @@
 </body>
 
 </html>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/navbar.js" crossorigin="anonymous"></script>
