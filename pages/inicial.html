@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="../img/Logo.png"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/inicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <title>Inicio</title>
+</head>
+<body>
+  <div class="superior">
+    <div class="perfil">
+        <h6 class="empresa">Empresa x Ltda</h6>
+        <img src="../img/usuario.png" alt="" class="fotoPerfil" />
+    </div>
+</div>
+    <section class="breadcrumbSuperior">
+        <ul class="breadcrumb">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#" class="localAtual">Pégina Inicial</a></li>
+        </ul>
+    </section>
+
+    <section class="boasVindas">
+      <div class="central">
+        <h1>Seja Bem-Vindo ao seu sistema de gerenciamento de estoque.</h1>
+      </div>
+    </section>
+
+  
+    <nav class="main-menu">
+        <div>
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="scrollbar" id="style-1">
+
+            <ul>
+                <li class="item-menu">
+                    <a href="./inicial.html">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Página Inicial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
+                        <i class="fa fa-user fa-lg"></i>
+                        <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-funcionario" style="display: none;">
+                        <li>
+                            <a href="cadastroUsuario.html">
+                                <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
+                                <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
+                                    Funcionário</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
+                        <i class="fa fa-boxes fa-lg"></i>
+                        <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-estoque" style="display: none;">
+                        <li>
+                            <a href="cadastroProdutos.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Cadastrar Produto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastroFornecedor.html">
+                                <i class="fa fa-truck fa-sm"></i>
+                                <span class="nav-text">Cadastrar Fornecedor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fa fa-chart-line fa-sm"></i>
+                                <span class="nav-text">Análise do Estoque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estoque.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Meu Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-relatorios" style="display: none;">
+                        <li>
+                            <a href="relatorios.html">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="nav-text">Gerar Relatório</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-lg"></i>
+                        <span class="nav-text">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out-alt fa-lg"></i>
+                        <span class="nav-text">Sair</span>
+                    </a>
+                </li>
+                </li>
+            </ul>
+    </nav>
+
+</body>
+</html>
+
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/navbar.js" crossorigin="anonymous"></script>
