@@ -37,7 +37,7 @@ Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar 
 
 
 ## Instalação e Configuração
-Para começar com o **Music Box**, siga estes passos:
+Para começar com o **EstoqueToc**, siga estes passos:
 1. **Clonar ou baixar o projeto**: Acesse o repositório e clone ou faça o download do código-fonte para sua máquina local.
 2. **Configuração do Ambiente**: Abra o diretório raiz do projeto (`COLOCAR AQUI`) no Visual Studio Code (VS Code) e navegue até o terminal.
 3. **Instalação de Dependências**:
