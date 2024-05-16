@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+    <link rel="website icon" type="png" href="../img/Logo.png"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../js/usuario.js">
+    <title>EstoqueToc | Dashboard</title>
+</head>
+
+<body>
+    <div class="superior">
+        <div class="perfil">
+            <h6 class="empresa">Empresa x Ltda</h6>
+            <img src="../img/usuario.png" alt="" class="fotoPerfil" />
+        </div>
+    </div>
+
+    <section class="breadcrumbSuperior">
+        <ul class="breadcrumb">
+            <li><a href="./inicial.html">Home</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#" class="localAtual"> Gerar Relatório</a></li>
+        </ul>
+    </section>
+    <nav class="main-menu">
+        <div>
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="scrollbar" id="style-1">
+
+            <ul>
+                <li class="item-menu">
+                    <a href="./inicial.html">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Página Inicial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
+                        <i class="fa fa-user fa-lg"></i>
+                        <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-funcionario" style="display: none;">
+                        <li>
+                            <a href="cadastroUsuario.html">
+                                <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
+                                <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
+                                    Funcionário</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
+                        <i class="fa fa-boxes fa-lg"></i>
+                        <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-estoque" style="display: none;">
+                        <li>
+                            <a href="cadastroProdutos.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Cadastrar Produto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastroFornecedor.html">
+                                <i class="fa fa-truck fa-sm"></i>
+                                <span class="nav-text">Cadastrar Fornecedor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fa fa-chart-line fa-sm"></i>
+                                <span class="nav-text">Análise do Estoque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estoque.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Meu Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-relatorios" style="display: none;">
+                        <li>
+                            <a href="relatorios.html">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="nav-text">Gerar Relatório</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-lg"></i>
+                        <span class="nav-text">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out-alt fa-lg"></i>
+                        <span class="nav-text">Sair</span>
+                    </a>
+                </li>
+                </li>
+            </ul>
+    </nav>
+
+    <div class="sec">
+        <main class="main-content">
+            <section class="cards">
+                <div class="card">
+                    <h2>Faturamento mês Janeiro</h2>
+                    <p>R$ 2.569,00</p>
+                    <span class="negative">-10% este mês</span>
+                </div>
+                <div class="card">
+                    <h2>Faturamento mês Passado</h2>
+                    <p>R$ 3.236,94</p>
+                    <span class="positive">+20% este mês</span>
+                </div>
+                <div class="card">
+                    <h2>Total Produtos Perdidos</h2>
+                    <p>120 Uni.</p>
+                    <span class="positive">+10% este mês</span>
+                </div>
+            </section>
+            <section class="chart">
+                <h2>Total de Faturamento</h2>
+                <canvas id="revenueChart"></canvas>
+            </section>
+        </main>
+    </div>
+    </div>
+
+    <script>
+        function botaoMenu() {
+            var menu = document.getElementById("menu");
+            var botaoMenuImg = document.getElementById("botaoMenuImg");
+
+            menuLateral.classList.toggle("ver-menu");
+            botaoMenuImg.style.display = menuLateral.classList.contains("ver-menu") ? "none" : "block";
+
+            var content = document.querySelector(".content");
+            content.classList.toggle("content-shift");
+
+        }
+
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+        var revenueChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                datasets: [{
+                    label: 'Total de Faturamento',
+                    data: [2569, 3236, 2890, 4022, 3688, 4277, 3902, 4590, 4782, 5120, 4899, 5300], // Substituir por seus dados reais
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                maintainAspectRatio: true,
+                aspectRatio: 2 // Ajuste conforme necessário para controlar a altura do gráfico
+            }
+        });
+
+
+
+
+        var tabela = document.querySelector(".main-content")
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "20%";
+            tabela.style.width = "80%"
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            tabela.style.width = "100%"
+        }
+    </script>
+</body>
+
+</html>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/navbar.js" crossorigin="anonymous"></script>
