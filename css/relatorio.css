@@ -1,0 +1,119 @@
+.empresa{
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.grid {
+    width:100%;
+    padding: 1.2rem;
+  }
+
+.relatorios-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-text{
+    margin-top:10px;
+}
+
+.fas{
+    margin-left: 5px;
+}
+
+.logo{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.list{
+  width: 70%;
+}
+
+.relatorio-card{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 4px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #F3B44C; 
+    margin-top: 12px;
+    color: rgba(89, 84, 84, 0.56);
+}
+
+.relatorio-card:hover{
+    transform: scale(1.001);
+    color: white;
+    background-color: #F3B44C; 
+}   
+
+.relatorio-card p{
+    font-size: 1.5rem;
+    font-weight: 450;
+    margin: 0%;
+}
+
+/*DATA DOS CARDS*/
+
+.relatorios-get{
+    width: 70%;
+    color: #e8bb72;
+    margin-right: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    border: 1px solid #e5e5e5;
+    box-shadow: rgba(17, 17, 26, 0.1) 10px 10px 5px;
+}
+
+.relatorios-get button{
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    background-color: white;
+    color: #000;
+    border: 2px solid #F3B44C; 
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.relatorios-get button:hover {
+    background-color: #F3B44C; 
+    border: 2px solid #F3B44C; 
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.relatorios-get label {
+    font-size: 1.1rem;
+}
+
+#dataInicial, #dataFinal{
+    width: 100%;
+    padding: 8px 30px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #F3B44C;
+    color: rgba(89, 84, 84, 0.359);
+    font-size: medium;
+}
+
+.relatorios-container {
+    display: flex; 
+    width: 100%;
+}
+
