@@ -33,14 +33,11 @@ Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar 
 
 
 ## Face do projeto
-<img width="100%" src="#"/>
-<img width="50%" src="#"/> 
-<img width="49%" src="#"/> 
-<img width="50%" src="#"/> 
-<img width="49%" src="#"/> 
+<img width="100%" src="#"/>![HOME](https://github.com/EstoqueToc/Front-End/assets/125396288/11e37eb7-ff22-4102-bde0-a7825b2c28e2)
+
 
 ## Instalação e Configuração
-Para começar com o **Music Box**, siga estes passos:
+Para começar com o **EstoqueToc**, siga estes passos:
 1. **Clonar ou baixar o projeto**: Acesse o repositório e clone ou faça o download do código-fonte para sua máquina local.
 2. **Configuração do Ambiente**: Abra o diretório raiz do projeto (`COLOCAR AQUI`) no Visual Studio Code (VS Code) e navegue até o terminal.
 3. **Instalação de Dependências**:

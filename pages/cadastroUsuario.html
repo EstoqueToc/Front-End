@@ -1,95 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EstoqueToc | Cadastro de Usuários</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/usuario.css"/>
+    <link rel="website icon" type="png" href="../img/Logo.png"/>
+    <link rel="stylesheet" href="../css/cadFuncionario.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/cadFuncionario.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Cadastro de Funcionário</title>
+
 </head>
 <body>
-    <nav class="menu-lateral" id="menuLateral">
-        <div class="botao-menu" onclick="botaoMenu()">
-            <img src="../img/menu-hamburguer.png" alt="" />
+    <div class="superior">
+        <div class="perfil">
+            <h6 class="empresa">Empresa x Ltda</h6>
+            <img src="../img/usuario.png" alt="" class="fotoPerfil" />
         </div>
+    </div>
 
-        <div class="usuario">
-            <h4 id="Empresa">Empresa ABC</h4>
-            <img src="../img/usuario.png" alt="" />
-            <p id="Usuario">Raquel Guimarães</p>
-        </div>
-
-        <ul>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="editar">Editar <img src="../img/editar.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./dashboard.html">
-                    <span class="icone"></span>
-                    <span class="texto">Página Inicial</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./estoque.html">
-                    <span class="icone"></span>
-                    <span class="texto">Estoque <img src="../img/estoque-pronto.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Compras<img src="../img/compras.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./relatorios.html">
-                    <span class="icone"></span>
-                    <span class="texto">Relatórios<img src="../img/relatorio.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="./usuario.html">
-                    <span class="icone"></span>
-                    <span class="texto">Usuários<img src="../img/adicionar-usuario.png" alt=""></span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icone"></span>
-                    <span class="texto">Sair</span>
-                </a>
-            </li>
+    <section class="breadcrumbSuperior">
+        <ul class="breadcrumb">
+            <li><a href="./inicial.html">Home</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#" class="localAtual">Cadastrar Funcionário/a></li>
         </ul>
+    </section>
+    <nav class="main-menu">
+        <div>
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="scrollbar" id="style-1">
+
+            <ul>
+                <li class="item-menu">
+                    <a href="./inicial.html">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Página Inicial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-funcionario')">
+                        <i class="fa fa-user fa-lg"></i>
+                        <span class="nav-text">Funcionário<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-funcionario" style="display: none;">
+                        <li>
+                            <a href="cadastroUsuario.html">
+                                <i class="fa fa-user-plus fa-sm" id="iconeCadastrar"></i>
+                                <span class="nav-text" id="textoCadastrarFuncionario">Cadastrar
+                                    Funcionário</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-estoque')">
+                        <i class="fa fa-boxes fa-lg"></i>
+                        <span class="nav-text"> Estoque <i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-estoque" style="display: none;">
+                        <li>
+                            <a href="cadastroProdutos.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Cadastrar Produto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastroFornecedor.html">
+                                <i class="fa fa-truck fa-sm"></i>
+                                <span class="nav-text">Cadastrar Fornecedor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fa fa-chart-line fa-sm"></i>
+                                <span class="nav-text">Análise do Estoque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estoque.html">
+                                <i class="fa fa-cube fa-sm"></i>
+                                <span class="nav-text">Meu Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-relatorios')">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="nav-text">Relatórios<i class="fas fa-angle-down"></i></span>
+                    </a>
+                    <ul id="submenu-relatorios" style="display: none;">
+                        <li>
+                            <a href="relatorios.html">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="nav-text">Gerar Relatório</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-lg"></i>
+                        <span class="nav-text">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out-alt fa-lg"></i>
+                        <span class="nav-text">Sair</span>
+                    </a>
+                </li>
+                </li>
+            </ul>
     </nav>
+
 
     <div class="container">
         <div class="conteudo">
-            <h1>Cadastro de Usuários</h1>
-            <form class="form" id="usuario-form">
+            <h1>Cadastro de Funcionário</h1>
+            <form class="form" id="product-form">
                 <div class="conteudos">
                     <div class="left">
-                        <label for="usuario">Usuario:</label>
-                        <input class="input" type="text" id="usuario" name="Usuario">
+
+                        <label for="id">Nome:</label>
+                        <input class="input" type="text" id="nomeFunc" name="Nome Funcionário" size="60"><br />
+                      
+                        <label for="função">Função:</label>
+                        <input class="input" type="text" id="função" name="função" size="60"><br />
     
-                        <label for="email">Email:</label>
-                        <input class="input" type="email" id="email" name="email">
+                        <label for="admissão">Admissão:</label>
+                        <input class="input" type="text" id="admissão" name="admissão" size="40"><br />
+    
+                        <label for="demissão">Demissão:</label>
+                        <input class="input" type="text" id="demissão" name="demissão" size="40"> <br />
+                    
+                        <label for="contato">Contato:</label>
+                        <input class="input" type="text" id="contato" name="contato" size="40"><br />
+                 
                     </div>
     
                     <div class="right">
-                        <label for="funcao">Função:</label>
-                        <input class="input" type="text" id="funcao" name="funcao">
-    
-                        <label for="status">Status:</label>
-                        <input class="input" type="text" id="status" name="status"> <br>
+                      
+                        <form method="get" action=".">
+
+                            <label>Cep:</label>
+                            <input class="input" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                                   onblur="pesquisacep(this.value);" /><br />
+                            <label>Rua:</label>
+                            <input class="input" name="rua" type="text" id="rua" size="60" /><br />
+                            <label>Bairro:</label>
+                            <input class="input" name="bairro" type="text" id="bairro" size="40" /><br />
+                            <label>Cidade:</label>
+                            <input class="input" name="cidade" type="text" id="cidade" size="40" /><br />
+                            <label>Estado:</label>
+                            <input class="input" name="uf" type="text" id="uf" size="2" /><br />
+                        
+                          </form>
                     </div>
                 </div>
                 <div class="bnts">
-                    <button class="btnCadUsuario" type="button" onclick="window.history.back();">Cancelar</button>
-                    <input class="btnCadUsuario" type="submit" value="Cadastrar">
+                    <button class="btnCadFunc" type="button" onclick="window.history.back();">Cancelar</button>
+                    <input class="btnCadFunc" type="submit" value="Cadastrar">
                 </div>
             </form>
         </div>
@@ -98,17 +181,79 @@
     <footer class="footer">
         <p>&copy;EstoqueToc.</p>
     </footer>
+
 </body>
 </html>
+
 <script>
-    function botaoMenu() {
-        var menu = document.getElementById("menu");
-        var botaoMenuImg = document.getElementById("botaoMenuImg");
-
-        menuLateral.classList.toggle("ver-menu");
-        botaoMenuImg.style.display = menuLateral.classList.contains("ver-menu") ? "none" : "block";
-
-        var content = document.querySelector(".content");
-        content.classList.toggle("content-shift");
+    
+    function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('uf').value=("");
+            document.getElementById('ibge').value=("");
     }
-</script>
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('uf').value=(conteudo.uf);
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+        
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('uf').value="...";
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+
+    </script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/navbar.js" crossorigin="anonymous"></script>
