@@ -24,7 +24,7 @@ O EstoqueToc é um projeto desenvolvido em grupo na São Paulo Tech School, foca
 Nosso objetivo é oferecer soluções eficientes e personalizadas para otimizar a gestão de inventário, proporcionando uma vantagem competitiva aos nossos clientes.
 
 ## Veja os outros ReadMe do projeto EstoqueToc:
-🔗 [Documentação](https://github.com/EstoqueToc/Documentation)   🔗 [Front-End](https://github.com/EstoqueToc/FrontEnd)  🔗 [Back-End](https://github.com/EstoqueToc/BackEnd)
+🔗 [Documentação](https://github.com/EstoqueToc/Documentation)   🔗 [Front-End](https://github.com/EstoqueToc/React)  🔗 [Back-End](https://github.com/EstoqueToc/BackEnd)
 
 ## Destaques nos menbros do Projeto
 [@Arthur-Ciliberti] https://github.com/Arthur-Ciliberti | [@Guss00] https://github.com/Guss00 </br>
